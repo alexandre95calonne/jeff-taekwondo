@@ -50,6 +50,13 @@ body {
   transform: translateY(0);
 }
 
+@media (max-width: 650px) {
+  .fade-in.disable-section {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+  }
+}
 .section__padding {
   padding: 4rem 6rem;
 }
@@ -83,13 +90,13 @@ body {
   align-items: center;
   height: 8vh;
   padding: 0 2rem;
-  background-color: #343A40;
+  background-color: transparent;
+  color: #fff;
 }
 
 .header-title {
   font-size: 1.4rem;
   font-family: "Roboto Slab", serif;
-  color: #FFFFFF;
 }
 
 h1 {
@@ -108,6 +115,7 @@ nav a {
   margin-right: 40px;
   font-size: 21px;
   border-bottom: 1px solid transparent;
+  font-weight: 500;
 }
 
 nav a:hover {
@@ -666,6 +674,9 @@ main button {
 }
 .avis .carousel__slide.active {
   display: block;
+  height: 15vh;
+  display: flex;
+  align-items: center;
 }
 .avis .voir-tout a {
   color: black;
@@ -673,6 +684,16 @@ main button {
   text-decoration: none;
 }
 
+@media screen and (max-width: 950px) {
+  .avis .carousel .carousel__slide.active {
+    height: 25vh;
+  }
+}
+@media screen and (max-width: 650px) {
+  .avis .carousel .carousel__slide.active {
+    height: 30vh;
+  }
+}
 @media screen and (max-width: 600px) {
   .avis .carousel p {
     font-size: 22px;
@@ -683,7 +704,20 @@ main button {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 400px) {
+  .avis .carousel .carousel__slide.active {
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 350px) {
+  .avis .carousel .carousel__slide.active {
+    height: 50vh;
+  }
+}
 /* CONTACT */
+.contact {
+  margin-bottom: 2rem;
+}
 .contact form {
   display: flex;
   flex-direction: row;
@@ -821,13 +855,14 @@ main button {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: #C60C30;
+  background-color: #343A40;
   text-align: center;
   padding: 1.5rem 0;
 }
 footer a {
   text-decoration: none;
-  color: black;
+  color: #a1c862;
+  font-weight: bold;
   border-bottom: 1px solid transparent;
 }
 footer a:hover {

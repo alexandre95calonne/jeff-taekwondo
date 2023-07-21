@@ -20,16 +20,6 @@ function closeNav() {
     sidenav.classList.remove("active");
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    var links = sidenav.querySelectorAll('a');
-    for (var i = 0; i < links.length; i++) {
-        links[i].addEventListener('click', function(event) {
-            event.stopPropagation(); loin
-            closeNav();
-        });
-    }
-});
-
 document.addEventListener('click', function(event) {
     var isActive = sidenav.classList.contains("active");
 
@@ -79,9 +69,17 @@ setInterval(function() {
 const fadeIns = document.querySelectorAll('.fade-in');
 
 window.addEventListener('scroll', () => {
+  const isSmallScreen = window.matchMedia("(max-width: 650px)").matches;
+
   fadeIns.forEach(fadeIn => {
+    // Ne pas appliquer l'animation si l'écran est petit et c'est la section à désactiver
+    if(isSmallScreen && fadeIn.classList.contains('disable-section')) {
+      return;
+    }
+
     if(fadeIn.getBoundingClientRect().top < window.innerHeight / 1.3) {
       fadeIn.classList.add('active');
     }
   });
 });
+
