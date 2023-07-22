@@ -116,7 +116,7 @@ h1 {
 nav {
   display: flex;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 nav a {
@@ -126,6 +126,7 @@ nav a {
   font-size: 21px;
   border-bottom: 1px solid transparent;
   font-weight: 500;
+  
 }
 
 nav a:hover {
@@ -905,6 +906,7 @@ main button {
     margin-bottom: 2rem;
 
     p {
+      width: 100%;
       font-size: 24px;
     }
   }

@@ -106,7 +106,7 @@ h1 {
 nav {
   display: flex;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 nav a {
@@ -666,6 +666,7 @@ main button {
   margin-bottom: 2rem;
 }
 .avis .carousel p {
+  width: 100%;
   font-size: 24px;
 }
 .avis .carousel__slide {
