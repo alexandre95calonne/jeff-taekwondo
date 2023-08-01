@@ -449,7 +449,7 @@ main button {
 .mes-cours {
   display: flex;
   flex-direction: column;
-  background-color: #C60C30;
+  background-color: #A9A9A9;
 }
 .mes-cours .mes-cours__txt {
   font-size: 25px;
@@ -652,7 +652,7 @@ main button {
 }
 /* AVIS */
 .avis {
-  background-color: #C60C30;
+  background-color: #A9A9A9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -700,6 +700,11 @@ main button {
     font-size: 22px;
   }
 }
+@media screen and (max-width: 550px) {
+  .avis .carousel .carousel__slide.active {
+    height: 35vh;
+  }
+}
 @media screen and (max-width: 500px) {
   .avis .carousel p {
     font-size: 20px;
@@ -707,7 +712,7 @@ main button {
 }
 @media screen and (max-width: 400px) {
   .avis .carousel .carousel__slide.active {
-    height: 40vh;
+    height: 45vh;
   }
 }
 @media screen and (max-width: 350px) {
