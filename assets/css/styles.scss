@@ -133,7 +133,7 @@ header {
 .background-image {
   width: 100%;
   height: 100%;
-  background-image: url("../img/home2.jpeg");
+  background-image: url("../img/home.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(55%);
@@ -147,7 +147,7 @@ header {
   position: relative;
   z-index: 2;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.62) 39.06%, rgba(0, 0, 0, 0.31) 78.12%, rgba(0, 0, 0, 0.00) 100%);
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
 
@@ -205,13 +205,13 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 @media screen and (max-width: 1200px) {
 
   header {
-      height: 80vh;
+    height: 80vh;
   }
 }
 
 @media screen and (max-width: 990px) {
 
-  
+
 
   nav a {
     margin-right: 20px;
@@ -274,7 +274,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 
   header {
     height: 30vh;
-  
+
     .header-title {
       font-size: 16px;
     }
@@ -285,12 +285,23 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 @media screen and (max-width: 375px) {
 
   header {
-    height: 40vh;
+    height: 25vh;
   }
-  
 
   .header-title {
     font-size: 14.5px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+
+  header {
+    height: 22vh;
+  }
+
+  .header-title {
+    font-size: 12px;
+    padding-right: 1rem;
   }
 }
 
@@ -307,27 +318,223 @@ main button {
 .quisuisje {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   min-height: 300px;
-  height: 600px;
+  height: fit-content;
 
   .quisuisje__img {
     width: 50%;
-    border: 1px solid red;
-    background-image: url("../img/quisuisje.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+      width: 628px;
+      height: 449px;
+    }
   }
 
   .quisuisje__txt {
-    height: 100%;
     width: 50%;
-    border: 1px solid blue;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      font-size: 35px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 20px;
+      text-align: justify;
+    }
   }
 }
 
 
+@media screen and (max-width: 1600px) {
 
+  .quisuisje {
+    .quisuisje__txt {
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .quisuisje__img {
+
+      img {
+        width: 528px;
+        height: 400px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1300px) {
+
+  .quisuisje {
+    .quisuisje__txt {
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .quisuisje__img {
+
+      img {
+        width: 428px;
+        height: 325px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+  .quisuisje {
+    flex-direction: column;
+    margin-top: 2rem;
+    padding-top: 0;
+
+    .quisuisje__txt {
+      width: 100%;
+
+      p {
+        margin-top: 1rem;
+        font-size: 16px;
+        text-align: justify;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    }
+
+    .quisuisje__img {
+      width: 100%;
+      justify-content: center;
+      margin-top: 4rem;
+
+      img {
+        width: 628px;
+        height: 449px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .quisuisje {
+
+    .quisuisje__img {
+
+      img {
+        width: 528px;
+        height: 400px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+
+  .quisuisje {
+
+    .quisuisje__img {
+
+      img {
+        width: 428px;
+        height: 325px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .quisuisje {
+
+    .quisuisje__img {
+
+      img {
+        width: 100%;
+        height: 285px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 530px) {
+
+  .quisuisje {
+
+    .quisuisje__img {
+
+      img {
+        width: 100%;
+        height: 225px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 410px) {
+
+  .quisuisje {
+
+    .quisuisje__img {
+
+      img {
+        width: 100%;
+        height: 205px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+
+  .quisuisje {
+
+    .quisuisje__img {
+
+      img {
+        width: 100%;
+        height: 180px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 330px) {
+
+  .quisuisje {
+
+    .quisuisje__img {
+
+      img {
+        width: 100%;
+        height: 160px;
+      }
+    }
+  }
+
+}
 
 
 
@@ -370,167 +577,264 @@ main button {
 
 /* MES COURS */
 
-.mes-cours {
-
+.mescours {
   display: flex;
-  flex-direction: column;
-  background-color: #A9A9A9;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  height: fit-content;
 
-  .mes-cours__txt {
-    // font-style: italic;
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .mes-cours__img {
+  .mescours__img {
+    width: 50%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    height: 65vh;
+    justify-content: flex-start;
+    align-items: center;
 
     img {
-      border-radius: 10px;
-      width: 52vw;
-      animation: fadeIn 2s ease-in-out 1 forwards;
-      opacity: 0;
+      width: 628px;
+      height: 449px;
     }
   }
 
-}
+  .mescours__txt {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
-@media screen and (max-width: 1400px) {
-  .mes-cours {
     h2 {
-      font-size: 42px;
+      font-size: 35px;
+      margin-bottom: 1rem;
     }
 
-    .mes-cours__img {
-      height: 60vh;
+    p {
+      font-size: 20px;
+      text-align: justify;
     }
   }
 }
 
-@media screen and (max-width: 1150px) {
-  .mes-cours {
+@media screen and (max-width: 1600px) {
+
+  .mescours {
+    .mescours__txt {
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .mescours__img {
+
+      img {
+        width: 528px;
+        height: 400px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1300px) {
+
+  .mescours {
+    .mescours__txt {
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .mescours__img {
+
+      img {
+        width: 428px;
+        height: 325px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+  .mescours {
+    flex-direction: column-reverse;
+    margin-top: 2rem;
+    padding-top: 0;
+
+    .mescours__txt {
+      width: 100%;
+
+      p {
+        margin-top: 1rem;
+        font-size: 16px;
+        text-align: justify;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    }
+
+    .mescours__img {
+      width: 100%;
+      justify-content: center;
+      margin-top: 4rem;
+
+      img {
+        width: 628px;
+        height: 449px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .mescours {
+
+    .mescours__img {
+
+      img {
+        width: 528px;
+        height: 400px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+
+  .mescours {
+
+    .mescours__img {
+
+      img {
+        width: 428px;
+        height: 325px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .mescours {
+
+    .mescours__img {
+
+      img {
+        width: 100%;
+        height: 285px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 530px) {
+
+  .mescours {
+
+    .mescours__img {
+
+      img {
+        width: 100%;
+        height: 225px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 410px) {
+
+  .mescours {
+
+    .mescours__img {
+
+      img {
+        width: 100%;
+        height: 205px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+
+  .mescours {
+
+    .mescours__img {
+
+      img {
+        width: 100%;
+        height: 180px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 330px) {
+
+  .mescours {
+
+    .mescours__img {
+
+      img {
+        width: 100%;
+        height: 160px;
+      }
+    }
+  }
+
+}
+
+/* LA SALLE */ 
+
+.lasalle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  height: 584px;
+
+  .lasalle__txt {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid blue;
+
     h2 {
-      font-size: 40px;
+      font-size: 35px;
+      margin-bottom: 1rem;
     }
 
-    .mes-cours__img {
-      height: 55vh;
-    }
-
-    .mes-cours__txt {
-      font-size: 22px;
+    p {
+      font-size: 20px;
+      text-align: justify;
     }
   }
-}
 
-@media screen and (max-width: 1000px) {
-  .mes-cours {
-    .mes-cours__img {
-
-      img {
-        width: 60vw;
-      }
-    }
+  .lasalle__container-img {
+    border: 1px solid orange;
+    width: 65%;
+    height: 100%;
   }
-}
 
-@media screen and (max-width: 860px) {
-  .mes-cours {
-    .mes-cours__img {
-      height: 52vh;
 
-      img {
-        width: 65vw;
-      }
-    }
-  }
-}
 
-@media screen and (max-width: 750px) {
-  .mes-cours {
-    .mes-cours__img {
-      height: 50vh;
 
-      img {
-        width: 68vw;
-      }
-    }
-
-    .mes-cours__txt {
-      font-size: 20.5px;
-    }
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .mes-cours {
-    .mes-cours__img {
-      height: 49vh;
-
-      img {
-        width: 70vw;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 585px) {
-  .mes-cours {
-    .mes-cours__img {
-      height: 43vh;
-
-      img {
-        width: 70vw;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .mes-cours {
-    .mes-cours__img {
-      height: 40vh;
-    }
-
-    .mes-cours__txt {
-      font-size: 17px;
-    }
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .mes-cours {
-    .mes-cours__img {
-      height: 35vh;
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .mes-cours {
-    .mes-cours__img {
-      height: 33vh;
-    }
-
-    .mes-cours__txt {
-      font-size: 16px;
-    }
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .mes-cours {
-    .mes-cours__img {
-      height: 28vh;
-    }
-
-    .mes-cours__txt {
-      font-size: 15px;
-    }
-  }
 }
 
 /* TARIFS */
