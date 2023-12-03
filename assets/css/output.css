@@ -13,6 +13,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -551,18 +555,17 @@ main button {
 .lasalle {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: fit-content;
   height: 584px;
 }
 .lasalle .lasalle__txt {
-  width: 35%;
+  width: 55%;
   height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid blue;
 }
 .lasalle .lasalle__txt h2 {
   font-size: 35px;
@@ -573,11 +576,129 @@ main button {
   text-align: justify;
 }
 .lasalle .lasalle__container-img {
-  border: 1px solid orange;
-  width: 65%;
+  width: 42%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.lasalle .lasalle__container-img .lasalle-photos1-2 {
   height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-right: 1rem;
+}
+.lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo1 {
+  height: 50%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo1 img {
+  width: 235px;
+  height: 190px;
+}
+.lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo2 {
+  height: 50%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo2 img {
+  width: 235px;
+  height: 190px;
+}
+.lasalle .lasalle__container-img .lasalle-photo3 {
+  height: 100%;
+  width: 275px;
+}
+.lasalle .lasalle__container-img .lasalle-photo3 img {
+  width: 275px;
+  height: 400px;
 }
 
+@media screen and (max-width: 1600px) {
+  .lasalle .lasalle__txt p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .lasalle .lasalle__txt {
+    flex-wrap: wrap;
+    width: 600px;
+  }
+}
+@media screen and (max-width: 1340px) {
+  .lasalle .lasalle__txt {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 1230px) {
+  .lasalle .lasalle__txt {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1185px) {
+  .lasalle .lasalle__txt {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 1135px) {
+  .lasalle .lasalle__txt {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .lasalle {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .lasalle .lasalle__txt {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .lasalle .lasalle__txt h2 {
+    text-align: center;
+  }
+  .lasalle .lasalle__txt p {
+    margin-top: 1rem;
+  }
+  .lasalle .lasalle__container-img {
+    justify-content: center;
+    width: 100%;
+  }
+  .lasalle .lasalle__container-img .lasalle-photos1-2 {
+    width: 50%;
+    justify-content: flex-start;
+  }
+  .lasalle .lasalle__container-img .lasalle-photo3 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 715px) {
+  .lasalle .lasalle__container-img {
+    flex-direction: column;
+    border: 2px solid blue;
+    height: fit-content;
+  }
+  .lasalle .lasalle__container-img .lasalle-photos1-2 {
+    border: 2px solid orange;
+    width: 100%;
+  }
+  .lasalle .lasalle__container-img .lasalle-photo3 {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
 /* TARIFS */
 .tarifs .tarifs__container {
   width: 100%;
@@ -586,7 +707,7 @@ main button {
   flex-wrap: wrap;
 }
 .tarifs .tarifs__container .tarifs__bloc {
-  width: 35%;
+  width: 500px;
   padding: 2rem;
   margin: 1rem;
   text-align: center;
@@ -595,45 +716,99 @@ main button {
   align-items: center;
   color: black;
   background-color: #E4E2E2;
-  border-radius: 5px;
+  border-radius: 35px;
   outline: none;
 }
 .tarifs .tarifs__container .tarifs__bloc h3 {
-  font-weight: 700;
+  color: #8190DD;
+  text-align: center;
   font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
 }
 .tarifs .tarifs__container .tarifs__bloc p {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
 }
-.tarifs .tarifs__container .tarifs__bloc .prix {
-  margin-bottom: 0;
+.tarifs .tarifs__container .tarifs__bloc .infos-prix-duree {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
 }
-.tarifs .tarifs__container .tarifs__bloc .prix-avec-deduction {
-  color: green;
-  /* Choisissez la couleur qui vous convient */
-  font-weight: bold;
-  /* Mettez en gras pour attirer l'attention */
+.tarifs .tarifs__container .tarifs__bloc .infos-prix-duree .prix {
+  border: 2px solid #2D4189;
+  border-radius: 10px;
+  height: 100%;
+  width: 29%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.tarifs .tarifs__container .tarifs__bloc .prix-avec-deduction span {
-  text-decoration: underline;
-  /* Soulignez le prix après déduction pour le rendre plus visible */
+.tarifs .tarifs__container .tarifs__bloc .infos-prix-duree .duree {
+  border-radius: 10px;
+  border: 2px solid #2D4189;
+  height: 100%;
+  width: 69%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tarifs .tarifs__container .tarifs__bloc .infos-prix-duree-groupe {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
+}
+.tarifs .tarifs__container .tarifs__bloc .infos-prix-duree-groupe p {
+  font-size: 14px;
+}
+.tarifs .tarifs__container .tarifs__bloc .infos-prix-duree-groupe .prix {
+  border: 2px solid #2D4189;
+  border-radius: 10px;
+  height: 100%;
+  width: 29%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tarifs .tarifs__container .tarifs__bloc .infos-prix-duree-groupe .duree {
+  border-radius: 10px;
+  border: 2px solid #2D4189;
+  height: 100%;
+  width: 69%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tarifs .tarifs__container .tarifs__bloc .deduction {
+  font-weight: 200;
 }
 .tarifs .tarifs__container .tarifs__bloc button {
   width: max-content;
-  background-color: #a1c862;
+  background-color: #2D4189;
   padding: 15px;
   outline: none;
   border: none;
   border-radius: 5px;
-  color: black;
+  color: #fff;
   font-weight: bold;
   cursor: pointer;
   font-size: 18px;
 }
 .tarifs .tarifs__container .tarifs__bloc button:hover {
-  background-color: #818181;
+  background-color: #a1c862;
   color: #fff;
+}
+.tarifs .tarifs__container .tarifs__bloc .tarif-groupe {
+  margin-top: 2rem;
 }
 .tarifs .tarifs__container .bloc1 {
   border: 5px solid #343A40;
@@ -651,11 +826,6 @@ main button {
   border: 5px solid #343A40;
 }
 
-@media screen and (max-width: 1000px) {
-  .tarifs .tarifs__container .tarifs__bloc {
-    width: 38%;
-  }
-}
 @media screen and (max-width: 900px) {
   .tarifs .tarifs__container .tarifs__bloc {
     width: 42%;
@@ -673,7 +843,7 @@ main button {
 }
 /* AVIS */
 .avis {
-  background-color: #A9A9A9;
+  background-color: #F4F4F4;
   display: flex;
   flex-direction: column;
   justify-content: center;
