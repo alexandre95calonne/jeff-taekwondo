@@ -2,12 +2,12 @@ var sidenav = document.getElementById("mySidenav");
 var openBtn = document.getElementById("openBtn");
 var closeBtn = document.getElementById("closeBtn");
 
-openBtn.addEventListener('click', function(event) {
+openBtn.addEventListener('click', function (event) {
     event.stopPropagation();
     openNav();
 });
 
-closeBtn.addEventListener('click', function(event) {
+closeBtn.addEventListener('click', function (event) {
     event.stopPropagation();
     closeNav();
 });
@@ -20,7 +20,7 @@ function closeNav() {
     sidenav.classList.remove("active");
 }
 
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     var isActive = sidenav.classList.contains("active");
 
     if (isActive) {
@@ -60,27 +60,45 @@ function closeModal() {
 var slides = document.querySelectorAll('.carousel__slide');
 var currentSlide = 0;
 
-setInterval(function() {
+setInterval(function () {
     slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide+1)%slides.length;
+    currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add('active');
 }, 5000);
 
 const fadeIns = document.querySelectorAll('.fade-in');
 
 window.addEventListener('scroll', () => {
-  const isSmallScreen = window.matchMedia("(max-width: 650px)").matches;
+    const isSmallScreen = window.matchMedia("(max-width: 650px)").matches;
 
-  fadeIns.forEach(fadeIn => {
-    // Ne pas appliquer l'animation si l'écran est petit et c'est la section à désactiver
-    if(isSmallScreen && fadeIn.classList.contains('disable-section')) {
-      return;
-    }
+    fadeIns.forEach(fadeIn => {
+        if (isSmallScreen && fadeIn.classList.contains('disable-section')) {
+            return;
+        }
 
-    if(fadeIn.getBoundingClientRect().top < window.innerHeight / 1.3) {
-      fadeIn.classList.add('active');
-    }
-  });
+        if (fadeIn.getBoundingClientRect().top < window.innerHeight / 1.3) {
+            fadeIn.classList.add('active');
+        }
+    });
 });
 
+var inputs = document.querySelectorAll('#inputNomPrenom, #inputEmail, #inputMessage');
+
+inputs.forEach(function (input) {
+    input.addEventListener('focus', function () {
+        this.setAttribute('placeholder', '');
+    });
+
+    input.addEventListener('blur', function () {
+        if (this.value === '') {
+            if (this.id === 'inputNomPrenom') {
+                this.setAttribute('placeholder', 'Votre nom et prenom :');
+            } else if (this.id === 'inputEmail') {
+                this.setAttribute('placeholder', 'Votre mail :');
+            } else if (this.id === 'inputMessage') {
+                this.setAttribute('placeholder', 'Votre message :');
+            }
+        }
+    });
+});
 

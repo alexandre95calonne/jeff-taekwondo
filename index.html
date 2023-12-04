@@ -13,13 +13,11 @@
 <body>
   <header>
 
-
-    <!-- AJOUTER FADE IN  -->
-
-
     <div class="background-image"></div>
     <div class="header-container">
-      <h1 class="header-title">Jeff Coaching Taekwondo</h1>
+      <div class="logo">
+        <img src="./assets/img/logo.png" alt="">
+      </div>
 
       <nav>
         <a href="#quisuisje">Qui suis-je ?</a>
@@ -72,7 +70,7 @@
 
   </section>
 
-  <section class="mescours section__padding">
+  <section class="mescours section__padding fade-in" id="mescours">
 
     <div class="mescours__img">
       <img src="assets/img/mes-cours.png" alt="photo-cours-particulier">
@@ -90,7 +88,7 @@
 
   </section>
 
-  <section class="section__padding lasalle">
+  <section class="section__padding lasalle fade-in">
 
     <div class="lasalle__txt">
 
@@ -117,7 +115,7 @@
     </div>
   </section>
 
-  <section class="tarifs section__padding" id="tarifs">
+  <section class="tarifs section__padding fade-in" id="tarifs">
     <div class="h2">
       <h2>Mes tarifs</h2>
     </div>
@@ -206,19 +204,19 @@
         <p>Vous souhaitez prendre des cours et progresser sur une année entière ? Prenez votre première réservation dès
           maintenant !</p>
 
-          <div class="infos-prix-duree">
+        <div class="infos-prix-duree">
 
-            <div class="prix">
-              <p>1150€*</p>
-            </div>
-  
-            <div class="duree">
-              <p>1h de cours / semaine</p>
-            </div>
-  
+          <div class="prix">
+            <p>1150€*</p>
           </div>
-  
-          <p class="deduction">Prix après déduction fiscale : <b>575€</b>*</p>
+
+          <div class="duree">
+            <p>1h de cours / semaine</p>
+          </div>
+
+        </div>
+
+        <p class="deduction">Prix après déduction fiscale : <b>575€</b>*</p>
 
         <a href=""
           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jeff-coaching-taekwondo/cours-taekwondo'});return false;"><button>
@@ -231,27 +229,28 @@
         <p>Vous souhaitez faire vos cours en collectifs par groupe de 2 à 6 personnes ? Réservez votre cours dès
           maintenant </p>
 
-          <div class="infos-prix-duree-groupe">
+        <div class="infos-prix-duree-groupe">
 
-            <div class="prix">
-              <p>Tarif à négocier</p>
-            </div>
-  
-            <div class="duree">
-              <p>1h de cours / semaine (+ sur demande)</p>
-            </div>
-  
+          <div class="prix">
+            <p>Tarif à négocier</p>
           </div>
 
+          <div class="duree">
+            <p>1h de cours / semaine (+ sur demande)</p>
+          </div>
+
+        </div>
+
         <a href=""
-          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jeff-coaching-taekwondo/cours-taekwondo'});return false;"><button class="tarif-groupe">
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jeff-coaching-taekwondo/cours-taekwondo'});return false;"><button
+            class="tarif-groupe">
             Réserver un cours</button></a>
       </div>
 
     </div>
   </section>
 
-  <section class="avis section__padding" id="avis">
+  <section class="avis section__padding fade-in" id="avis">
     <div class="h2">
       <h2>Avis</h2>
     </div>
@@ -295,7 +294,7 @@
 
   </section>
 
-  <section id="contact" class="contact section__padding">
+  <section id="contact" class="contact section__padding fade-in">
 
     <div class="h2">
       <h2>Contact</h2>
@@ -303,19 +302,17 @@
 
     <form action="https://formspree.io/f/xrgwekvp" method="POST" onsubmit="return handleFormSubmit(event);">
       <label class="nom-prenom">
-        Votre nom et prénom :
-        <input type="nom-prenom" name="nom-prenom" required>
+        <input type="text" name="nom-prenom" placeholder="Votre nom et prenom :" id="inputNomPrenom" required>
       </label>
       <label class="email">
-        Votre email :
-        <input type="email" name="email" required>
+        <input type="email" name="email" placeholder="Votre mail :" id="inputEmail" required>
       </label>
       <label class="message">
-        Votre message :
-        <textarea name="message" required></textarea>
+        <textarea name="message" placeholder="Votre message :" id="inputMessage" required></textarea>
       </label>
-      <button type="submit">Envoyer mon message</button>
+      <button type="submit">Envoyer</button>
     </form>
+
 
     <div id="thanks-modal" class="modal">
       <div class="modal-content">
@@ -329,9 +326,9 @@
 
 
   <footer>
-    <p>© 2023 Copyright : Touts Droits Réservés - Fait par <a
+    <p>© 2023 Copyright : Touts Droits Réservés <br> Fait par <a
         href="https://linktr.ee/alexandre95calonne?utm_source=linktree_admin_share" target="_blank">Alexandre
-        Calonne</a></p>
+        Calonne </a> ~ Design par <a href="https://www.malt.fr/profile/julierichter?q=Julie+Richter&location=&sourceComponent=navbar_search_expanded&priceFilter=250,460&exp=&searchid=656d8fc8a32be101abb3e30b" target="_blank">Julie Richter</a> </p>
   </footer>
 
 
