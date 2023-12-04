@@ -216,6 +216,13 @@ header {
   header {
     height: 65vh;
   }
+  header .logo img {
+    width: 100px;
+    height: 100px;
+  }
+  #openBtn {
+    margin-top: 1rem;
+  }
   .burger-icon span {
     display: flex;
     width: 35px;
@@ -229,8 +236,8 @@ header {
 }
 @media screen and (max-width: 700px) {
   header .logo img {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -245,8 +252,8 @@ header {
 }
 @media screen and (max-width: 500px) {
   header .logo img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -267,8 +274,8 @@ header {
     height: 25vh;
   }
   header .logo img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
   .header-title {
     font-size: 14.5px;
@@ -773,7 +780,6 @@ main button {
   flex-direction: column;
   align-items: center;
   color: black;
-  background-color: #E4E2E2;
   border-radius: 35px;
   outline: none;
 }
@@ -869,19 +875,19 @@ main button {
   margin-top: 2rem;
 }
 .tarifs .tarifs__container .bloc1 {
-  border: 5px solid #343A40;
+  border: 3.5px solid #343A40;
 }
 .tarifs .tarifs__container .bloc2 {
-  border: 5px solid #343A40;
+  border: 3.5px solid #343A40;
 }
 .tarifs .tarifs__container .bloc3 {
-  border: 5px solid #343A40;
+  border: 3.5px solid #343A40;
 }
 .tarifs .tarifs__container .bloc4 {
-  border: 5px solid #343A40;
+  border: 3.5px solid #343A40;
 }
 .tarifs .tarifs__container .bloc5 {
-  border: 5px solid #343A40;
+  border: 3.5px solid #343A40;
 }
 
 @media screen and (max-width: 695px) {
@@ -1054,6 +1060,7 @@ main button {
   margin-top: 1vh;
   border: 2px solid #2D4189;
   padding-left: 5px;
+  border-radius: 10px;
 }
 .contact form input::placeholder {
   color: black;
@@ -1066,6 +1073,7 @@ main button {
   height: 120px;
   margin-top: 1vh;
   border: 2px solid #2D4189;
+  border-radius: 10px;
   padding-top: 15px;
   padding-left: 7.5px;
 }
