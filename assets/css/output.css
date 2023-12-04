@@ -94,8 +94,13 @@ body {
   color: #fff;
 }
 
-.header-title {
-  font-size: 1.4rem;
+.logo {
+  height: 100%;
+}
+.logo img {
+  margin-top: 1rem;
+  width: 148px;
+  height: 148px;
 }
 
 nav {
@@ -222,6 +227,12 @@ header {
     display: none;
   }
 }
+@media screen and (max-width: 700px) {
+  header .logo img {
+    width: 100px;
+    height: 100px;
+  }
+}
 @media screen and (max-width: 650px) {
   header {
     height: 45vh;
@@ -230,6 +241,12 @@ header {
 @media screen and (max-width: 550px) {
   header {
     height: 35vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  header .logo img {
+    width: 80px;
+    height: 80px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -248,6 +265,10 @@ header {
 @media screen and (max-width: 375px) {
   header {
     height: 25vh;
+  }
+  header .logo img {
+    width: 70px;
+    height: 70px;
   }
   .header-title {
     font-size: 14.5px;
@@ -677,6 +698,12 @@ main button {
     width: 50%;
     justify-content: flex-start;
   }
+  .lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo1 img {
+    width: 275px;
+  }
+  .lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo2 img {
+    width: 275px;
+  }
   .lasalle .lasalle__container-img .lasalle-photo3 {
     width: 50%;
   }
@@ -684,19 +711,50 @@ main button {
 @media screen and (max-width: 715px) {
   .lasalle .lasalle__container-img {
     flex-direction: column;
-    border: 2px solid blue;
     height: fit-content;
   }
   .lasalle .lasalle__container-img .lasalle-photos1-2 {
-    border: 2px solid orange;
+    justify-content: center;
     width: 100%;
   }
+  .lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo1 {
+    width: 100%;
+    justify-content: center;
+  }
+  .lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo2 {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
   .lasalle .lasalle__container-img .lasalle-photo3 {
-    border: 2px solid red;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo1 img {
+    width: 100%;
+  }
+  .lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo2 img {
+    width: 100%;
+  }
+  .lasalle .lasalle__container-img .lasalle-photo3 img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo1 img {
+    height: 170px;
+  }
+  .lasalle .lasalle__container-img .lasalle-photos1-2 .lasalle-photo2 img {
+    height: 170px;
+  }
+  .lasalle .lasalle__container-img .lasalle-photo3 img {
+    height: 330px;
   }
 }
 /* TARIFS */
@@ -826,19 +884,57 @@ main button {
   border: 5px solid #343A40;
 }
 
-@media screen and (max-width: 900px) {
-  .tarifs .tarifs__container .tarifs__bloc {
-    width: 42%;
-  }
-}
-@media screen and (max-width: 750px) {
-  .tarifs .tarifs__container .tarifs__bloc {
-    width: 44%;
-  }
-}
 @media screen and (max-width: 695px) {
   .tarifs .tarifs__container .tarifs__bloc {
     width: 100%;
+  }
+  .tarifs .tarifs__container .bloc5 .infos-prix-duree-groupe {
+    height: 60px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .tarifs .tarifs__container .tarifs__bloc {
+    width: 100%;
+  }
+  .tarifs .tarifs__container .tarifs__bloc .infos-prix-duree {
+    height: fit-content;
+  }
+  .tarifs .tarifs__container .bloc5 .infos-prix-duree-groupe {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .tarifs .tarifs__container .tarifs__bloc .infos-prix-duree {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .tarifs .tarifs__container .tarifs__bloc .infos-prix-duree .prix {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .tarifs .tarifs__container .tarifs__bloc .infos-prix-duree .duree {
+    width: 100%;
+  }
+  .tarifs .tarifs__container .tarifs__bloc .infos-prix-duree-groupe {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .tarifs .tarifs__container .tarifs__bloc .infos-prix-duree-groupe .prix {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .tarifs .tarifs__container .tarifs__bloc .infos-prix-duree-groupe .duree {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tarifs .tarifs__container .tarifs__bloc {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .tarifs .tarifs__container .tarifs__bloc button {
+    width: 100%;
+    font-size: 16px;
   }
 }
 /* AVIS */
@@ -866,7 +962,7 @@ main button {
 }
 .avis .carousel__slide.active {
   display: block;
-  height: 15vh;
+  height: 20vh;
   display: flex;
   align-items: center;
 }
@@ -878,12 +974,17 @@ main button {
 
 @media screen and (max-width: 950px) {
   .avis .carousel .carousel__slide.active {
-    height: 25vh;
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 775px) {
+  .avis .carousel .carousel__slide.active {
+    height: 40vh;
   }
 }
 @media screen and (max-width: 650px) {
   .avis .carousel .carousel__slide.active {
-    height: 30vh;
+    height: 45vh;
   }
 }
 @media screen and (max-width: 600px) {
@@ -893,7 +994,7 @@ main button {
 }
 @media screen and (max-width: 550px) {
   .avis .carousel .carousel__slide.active {
-    height: 35vh;
+    height: 50vh;
   }
 }
 @media screen and (max-width: 500px) {
@@ -903,12 +1004,22 @@ main button {
 }
 @media screen and (max-width: 400px) {
   .avis .carousel .carousel__slide.active {
-    height: 45vh;
+    height: 55vh;
   }
 }
 @media screen and (max-width: 350px) {
   .avis .carousel .carousel__slide.active {
-    height: 50vh;
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 325px) {
+  .avis .carousel .carousel__slide.active {
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 295px) {
+  .avis .carousel .carousel__slide.active {
+    height: 75vh;
   }
 }
 /* CONTACT */
@@ -941,24 +1052,42 @@ main button {
 .contact form input {
   height: 65px;
   margin-top: 1vh;
+  border: 2px solid #2D4189;
+  padding-left: 5px;
+}
+.contact form input::placeholder {
+  color: black;
+  padding-left: 5px;
+  font-size: 18px;
+  font-weight: 200;
+  font-style: italic;
 }
 .contact form textarea {
   height: 120px;
   margin-top: 1vh;
+  border: 2px solid #2D4189;
+  padding-top: 15px;
+  padding-left: 7.5px;
+}
+.contact form textarea::placeholder {
+  color: black;
+  font-size: 18px;
+  font-weight: 200;
+  font-style: italic;
 }
 .contact form button {
   margin-top: 4vh;
   height: 65px;
-  width: 25vw;
-  color: #515252;
-  background-color: #CFD0D0;
+  width: 15vw;
+  color: #fff;
+  background-color: #2D4189;
   font-size: 24px;
   font-weight: bold;
   border: none;
   cursor: pointer;
 }
 .contact form button:hover {
-  background-color: #49463f;
+  background-color: #a1c862;
   color: #FFFFFF;
   cursor: pointer;
 }
@@ -1052,9 +1181,12 @@ main button {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: #343A40;
+  background-color: #797E85;
   text-align: center;
   padding: 1.5rem 0;
+  color: #2D4189;
+  font-weight: 500;
+  padding: 2rem 6rem;
 }
 footer a {
   text-decoration: none;
@@ -1070,6 +1202,21 @@ footer a:hover {
 @media (max-width: 980px) {
   .calendly-badge-widget {
     display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  footer {
+    padding: 2rem 5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  footer {
+    padding: 2rem 4rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  footer {
+    padding: 2rem 3rem;
   }
 }
 
